@@ -10,6 +10,6 @@ public class Main {
 		Consumidor c1 = new Consumidor(c, 1);
 		
 		p1.start();
-        c1.start();
+		c1.start();
 	}
 }
