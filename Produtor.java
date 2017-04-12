@@ -13,16 +13,16 @@ public class Produtor extends Thread{
 	}
 
 	public void run() {
-	    for (int i = 0; i < 10; i++) {
-	        try {
-	        	Produto p = new Produto(i, i*2);
-	        	estoque.put(p); //InterruptedException
-	            System.out.println("Produtor "+id+" produziu o " + i + " com o tempo de " + i*2 + "s, delay termina "+(i*2+i*intervaloProducao/1000)+"s após início da produção!");
-	            sleep(intervaloProducao); //InterruptedException
-	        } 
-	        catch (InterruptedException e) { 
-	        	System.exit(1);
-	        }
-	    }
+		for (int i = 0; i < 10; i++) {
+			try {
+				Produto p = new Produto(i, i*2);
+				estoque.put(p); //InterruptedException
+				System.out.println("Produtor "+id+" produziu o " + i + " com o tempo de " + i*2 + "s, delay termina "+(i*2+i*intervaloProducao/1000)+"s apÃ³s inÃ­cio da produÃ§Ã£o!");
+				sleep(intervaloProducao); //InterruptedException
+			} 
+			catch (InterruptedException e) { 
+				System.exit(1);
+			}
+		}
 	}
 }
