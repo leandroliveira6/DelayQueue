@@ -12,14 +12,14 @@ public class Consumidor extends Thread{
 	}
 
 	public void run() {
-	    for (int i = 0; i < 10; i++) {
-	        try {
-	        	Produto p = estoque.take(); //InterruptedException
-				System.out.println("Comsumidor "+id+" consumiu o " + p.getValor() + ", "+p.getTempoDecorido()+"s após início da produção!");
-	        } 
-	        catch (InterruptedException e) { 
-	        	System.exit(1);
-	        }
-	    }
+		for (int i = 0; i < 10; i++) {
+			try {
+				Produto p = estoque.take(); //InterruptedException
+				System.out.println("Comsumidor "+id+" consumiu o " + p.getValor() + ", "+p.getTempoDecorido()+"s apÃ³s inÃ­cio da produÃ§Ã£o!");
+			} 
+			catch (InterruptedException e) { 
+				System.exit(1);
+			}
+		}
 	}
 }
